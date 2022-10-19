@@ -11,7 +11,7 @@ to be able to execute our components and to corroborate its operation in an auto
 
 Test Runners and Frameworks for the programming language you are working with
 
-![test runners](/images/test-runners.png)
+![test runners](./images/test-runners.png)
 
 The one we are going to use is jest, it creates the automated environment and executes the automated tests written in your
 automated tests that are written in your project.
