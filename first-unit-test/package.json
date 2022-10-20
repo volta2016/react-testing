@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --collectCoverage=true",
+    "test": "react-scripts test --collectCoverage=true  --env=jsdom --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "23.6.0"
   }
 }

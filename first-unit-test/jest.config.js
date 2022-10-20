@@ -1,5 +1,5 @@
 const config = {
-  verbose: true,
+  verbose: false,
   collectCoverageFrom: [
     "**/*.{js,jsx}",
     "!**/node_modules/**",
