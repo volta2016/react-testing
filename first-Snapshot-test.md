@@ -125,4 +125,101 @@ undefined
 
 We have to undefined -> we have to mount react
 
-Translated with www.DeepL.com/Translator (free version)
+We run once again our command **yarn run test**.
+
+now we can see that everything is running successfully, thanks to the instance that we can access
+through root we are going to be able to search the components, based on each of the elements that are in the component.
+of the elements that are in the component.
+
+1. If it renders correctly, the component has to be defined.
+2. That the component.toJSON() that the method so that it converts it to me in the form of object
+   it is going to bring a result and that result brings a point type, if it is form it means
+   that this rendering correctly a form
+
+```js
+describe("<Form />", () => {
+  beforeEach(() => {
+    component = create(<Form {...props} />);
+  });
+
+  it("Render correctly", () => {
+    expect(component).toBeDefined();
+    expect(component.toJSON().type).toEqual("form");
+
+    console.log(component.toJSON());
+  });
+});
+```
+
+![toJSON](/images/toJSON.png)
+
+it returns me the parent component and everything inside that component
+that has its respective properties, then I am accessing here that is of type form, that is another expect
+of the type form, that is another expect that you can begin to use.
+
+3. We expect that the instance of the component that is mounted .root that is to access to the
+   instance of the component and to be able to occupy the selectors of react test render, to be able to
+   to go and to look for the components that components -> the svg, the input the bottom
+   findbyType("") receives a parameter which is a string, this parameter can be a string
+   or the same component in case it is a component of our own, for which I am going to put input.
+   I am going to put input. What it is going to make inside the instance of the component, go
+   and I looked for an input that this for there descending of form and it tells me if it exists or not
+   if it exists it is going to bring me the result that is an object
+
+let's see if it exists we can see it in element type
+
+```js
+describe("<Form />", () => {
+  beforeEach(() => {
+    component = create(<Form {...props} />);
+  });
+
+  it("Render correctly", () => {
+    expect(component).toBeDefined();
+    expect(component.toJSON().type).toEqual("form");
+
+    // console.log(component.toJSON());
+    expect(component.root.findByType("input")).toBeDefined();
+    expect(component.root.findByType("button")).toBeDefined();
+    expect(component.root.findByType("svg")).toBeDefined();
+
+    console.log(component.root.findByType("input"));
+  });
+});
+```
+
+what we are asking it to look for inside the instance of the
+component if in fact exists an input a button and a svg -> if it does exist
+is rendering correctly
+
+PASS src/**test**/Form.test.js
+
+  <Form />
+    ✓ Renders correctly (21ms)
+
+Test Suites: 1 passed, 1 total
+Tests: 1 passed, 1 total
+Snapshots: 0 total
+Time: 3.474s
+Ran all test suites related to changed files.
+
+let's go first to my package.json to see the coverage although we know that it is very easy to cover.
+easy to cover, let's add inside the script:
+
+`````bash
+"test": "react-scripts test --collectCoverage",
+```
+
+to see exactly the coverage of the folder we are in.
+let's make coverage more precise
+
+````bash
+yarn run test test src/__tests__
+```
+
+we now have a coverage of:
+
+13 |
+Form.js | 66.67 | 0 | 33.33 | 66.67 | 0 | 33.33 | 66.67 | 0 | 33.33 | 66.67 | 0 | 33.33 | 66.67 | 0
+
+`````
