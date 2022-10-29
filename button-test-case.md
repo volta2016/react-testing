@@ -1,6 +1,6 @@
 # Button test case
 
-vamos a revisar el componente:
+let's check the component:
 
 ```js
 const Form = ({ handleSubmit, history }) => {
@@ -41,6 +41,27 @@ const Form = ({ handleSubmit, history }) => {
 export default Form;
 ```
 
-lo que yo estoy viendo es que tiene lógica, algo de eso es lo que vamos probar que se muestre,
-que no se muestre, que se desbloquee o bloquee. Dentro de button viene la propiedad disable y esta
-propiedad disable varia bastante
+What I am seeing is that it has logic, some of that is what we are going to try to show,
+that it is not shown, that it is unblocked or blocked. Inside button it comes the property disable and this
+property disable varies quite a lot. What it means is that if the searchEntry change
+this property is enabled after being trimmed without spaces, then the button is going to be enabled.
+enabled, this is a test case to test
+
+![pending-props](./images/pending-props.png)
+
+here what we can verify if disable is true.
+
+so we can access inside the instance of button.props.disable directly
+to the property of that component, which we expect to be .toBeTruthy()
+
+We create another test that has to be equal to:
+**expect(button.props.disable).toEqual("search-button null");**
+
+if it is empty in a first instance it will be null, otherwise it will be
+active
+
+Translated with www.DeepL.com/Translator (free version)
+
+```js
+className={`search-button ${searchEntry.trim() ? "active" : null}`}
+```
