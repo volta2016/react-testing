@@ -89,5 +89,3 @@ it("The onSubmit should be called without a problem", () => {
 the form has 100% in its coverage lines we have covered each of the lines of code of this component, but there is going to be a 100% coverage left.
 of this component, but this test case is going to be a little incomplete, so we are going to leave a
 we are going to leave a flag of TODO to make it as solid as possible.
-
-Translated with www.DeepL.com/Translator (free version)
