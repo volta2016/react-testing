@@ -206,14 +206,14 @@ Ran all test suites related to changed files.
 let's go first to my package.json to see the coverage although we know that it is very easy to cover.
 easy to cover, let's add inside the script:
 
-`````bash
+```bash
 "test": "react-scripts test --collectCoverage",
 ```
 
 to see exactly the coverage of the folder we are in.
 let's make coverage more precise
 
-````bash
+```bash
 yarn run test test src/__tests__
 ```
 
@@ -221,5 +221,3 @@ we now have a coverage of:
 
 13 |
 Form.js | 66.67 | 0 | 33.33 | 66.67 | 0 | 33.33 | 66.67 | 0 | 33.33 | 66.67 | 0 | 33.33 | 66.67 | 0
-
-`````
