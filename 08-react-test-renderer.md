@@ -63,13 +63,13 @@ console.log(testRenderer.toJSON());
 // children: [ 'Facebook' ] }
 ```
 
-veamos el resultado que me lanza, ya que la instancia de create me regresa un objeto
-el objeto lo podemos convertir a json y empezar a analizarlo, esto es lo que
-me regresaría el create en caso de montar un componente de tipo <a></a>
+Let's see the result that it throws at me, since the create instance returns an object
+we can convert the object to json and start parsing it, this is what
+would return the create in case of mounting a component of type <a></a>
 
-créate nos ayuda a montar el componente, en un ambiente que no es el navegador,
-pero, sin embargo, podemos ver la salida tal como si estuviesemos montando en un
-navegador real, eso para comprobar que esta funcionando
+create helps us to mount the component, in an environment that is not the browser,
+but, nevertheless, we can see the output just as if we were riding on a
+real browser, that to check that it is working
 
 ## Estos son todos los métodos que trae test rénder
 
